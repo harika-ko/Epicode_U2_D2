@@ -42,3 +42,19 @@ nav>span {
 }
 
 /*4.Write a selector to target the first blogpost*/
+
+.blog-post:first-of-type {
+    border: 3px solid black;
+}
+
+/*5.Write a selector to target the first blogpost <hr> and turn it red*/
+
+.blog-post:first-of-type hr {
+    background-color: red;
+}
+
+/*6.Write a selector to target the “even” links in the navbar*/
+
+.nav span:nth-child(2n) {
+    border: 3px solid blue;
+}
