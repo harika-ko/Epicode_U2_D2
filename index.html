@@ -362,6 +362,27 @@
 
     <a href="#" class="float-right mb-3 mr-3">Back to top</a>
     <script>
+
+        //13. Write a JavaScript functionality to add a new link into the navbar
+        function addNewLink() {
+            let navbar = document.querySelectorAll("nav span")
+            let newSpan = document.createElement("span")
+
+            for (let i = 0; i < navbar.length; i++) {
+                newSpan.innerText = " Country"
+                navbar[i].appendChild(newSpan)
+            }
+        }
+
+        // 14.Write a JavaScript functionality to change the color of the main heading title
+
+        function changeHeadingColor() {
+            let heading = document.getElementsByClassName("display-4")
+            for (let i = 0; i < heading.length; i++) {
+                heading[i].style.color = "grey"
+            }
+        }
+
         /* JS Exercises should go here */
         // Write a JavaScript functionality to add a new link into the navbar
         // Write a JavaScript functionality to change the color of the main heading title
