@@ -365,23 +365,19 @@
 
         //13. Write a JavaScript functionality to add a new link into the navbar
         function addNewLink() {
-            let navbar = document.querySelectorAll("nav span")
+            let navbar = document.querySelector("nav")
             let newSpan = document.createElement("span")
-
-            for (let i = 0; i < navbar.length; i++) {
-                newSpan.innerText = " Country"
-                navbar[i].appendChild(newSpan)
-            }
+            newSpan.innerText = " Country"
+            navbar.appendChild(newSpan)
         }
 
         // 14.Write a JavaScript functionality to change the color of the main heading title
 
         function changeHeadingColor() {
-            let heading = document.getElementsByClassName("display-4")
-            for (let i = 0; i < heading.length; i++) {
-                heading[i].style.color = "grey"
-            }
+            let heading = document.querySelector("h1")
+            heading.style.color = "grey"
         }
+
 
         //15.Write a JavaScript functionality to change the background of the jumbotron
 
@@ -400,6 +396,35 @@
             let link = document.querySelectorAll("ol li a")[13]
             link.style.visibility = "hidden"
         }
+
+        //17.Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
+
+        function removeChars() {
+            let blogPost = document.querySelectorAll(".blog-post p:first-of-type")
+            for (let i = 0; i < blogPost.length; i++) {
+                let paraText = blogPost[i].innerText
+                let arrayOfLetters = paraText.split("")
+                let output = arrayOfLetters.slice(50)
+                let joinedOutput = output.join("")
+                blogPost[i].innerText = joinedOutput
+
+            }
+        }
+
+        //18.Write a JavaScript functionality to add a new Blog Post (div with title and text)
+
+        function addNewBlog() {
+            let outerBlog = document.createElement("div")
+            outerBlog.classList.add("blog-post")
+
+            let titleBlog = document.createElement("h2")
+            titleBlog.classList.add("blog-post-title")
+            titleBlog.innerText = "Hello! New Title here"
+
+            outerBlog.appendChild(titleBlog)
+            document.querySelector("main .row div").appendChild(outerBlog)
+        }
+
 
         /* JS Exercises should go here */
         // Write a JavaScript functionality to add a new link into the navbar
