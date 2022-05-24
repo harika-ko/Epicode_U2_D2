@@ -425,6 +425,30 @@
             document.querySelector("main .row div").appendChild(outerBlog)
         }
 
+        //19.Write a JavaScript functionality to remove the last Blog Post when the user clicks on the “Older” button
+
+        function removeLastBlog() {
+            let olderButton = document.querySelector(".blog-pagination a:nth-of-type(1)")
+
+            olderButton.addEventListener("click", function () {
+                let lastBlog = document.querySelector(".blog-post:last-of-type")
+                lastBlog.remove()
+            })
+        }
+
+        //20.Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author’s name
+
+        function alertAuthor() {
+            let authorNames = document.querySelectorAll(".blog-post-meta a")
+            console.log(authorNames)
+
+            for (let i = 0; i < authorNames.length; i++) {
+                authorNames[i].addEventListener("mouseover", function () {
+                    alert(authorNames[i].innerText)
+                })
+            }
+        }
+
 
         /* JS Exercises should go here */
         // Write a JavaScript functionality to add a new link into the navbar
