@@ -76,3 +76,21 @@ nav>span {
 .blog-post:nth-of-type(3) ul li:nth-child(2) {
     background-color: yellow;
 }
+
+/*10.Write a selector to target the “back to top” link you can find at the bottom-right corner*/
+
+.float-right {
+    background-color: salmon;
+}
+
+/*11.Write a selector to target the “Newer” button at the bottom*/
+
+.blog-pagination .btn:nth-child(2) {
+    border: 5px solid crimson;
+}
+
+/*12.Write a selector to target the footer’s second link*/
+
+.blog-footer .text-center a:nth-child(2) {
+    background-color: aqua;
+}
