@@ -383,6 +383,24 @@
             }
         }
 
+        //15.Write a JavaScript functionality to change the background of the jumbotron
+
+        function changeBgJumbotron() {
+            let jumbotron = document.querySelector(".jumbotron")
+            jumbotron.style.backgroundColor = "blue"
+        }
+
+        //16.Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
+
+        window.onload = function () {
+            removeTwitterLink()
+        }
+
+        function removeTwitterLink() {
+            let link = document.querySelectorAll("ol li a")[13]
+            link.style.visibility = "hidden"
+        }
+
         /* JS Exercises should go here */
         // Write a JavaScript functionality to add a new link into the navbar
         // Write a JavaScript functionality to change the color of the main heading title
